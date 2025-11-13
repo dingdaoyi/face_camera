@@ -25,10 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    // Conditional for compatibility with AGP <4.2.
-    if (project.android.hasProperty("namespace")) {
-        namespace 'com.conezi.face_camera'
-    }
+    namespace 'com.conezi.face_camera'
     compileSdkVersion 34
 
     compileOptions {
@@ -39,7 +36,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.example.face_camera'
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
